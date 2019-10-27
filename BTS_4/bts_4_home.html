@@ -22,14 +22,13 @@
 			jQuery(document).ready(function() {
 				var images = ['banner1.jpg','banner2.jpg'];
 				
-				$('.headerImage').css({'background-image': 'url("' + images[Math.floor(Math.random() * images.length)] +'")'});
+				$('.headerImage').css({'background-image': 'url("imgs/' + images[Math.floor(Math.random() * images.length)] +'")'});
 			});
 			
 		</script>
 		
 		<style>
 			.headerImage{
-				background-position: centered;
 				background-height: 300px;
 				margin-bottom: 0;
 			}
@@ -37,7 +36,10 @@
 			.default{
 				font-size: 16px;
 				line-height: 1.5;
-				background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+				background-color: #F5FBEF;
+				background-image: url('imgs/bg.jpg');
+				background-repeat: repeat;
+				background-attachment: fixed;
 			}
 		</style>		
 		
@@ -45,34 +47,14 @@
 	
 	<body class="default">
 	
-		<div style="height:300px;" class="jumbotron jumbotron-fluid bg-primary headerImage"></div>
+		<div style="height:300px; background-position: center; background-size:: stretch;" class="jumbotron jumbotron-fluid bg-primary headerImage"></div>
 		
-		<div class="row sticky-top">
-			
-			<!-- 	Visualizzazione su smartphone 	-->
-			
-			<div class="col-md-12 d-lg-none">
+		<div class="row sticky-top mr-0">
+		
+			<div class="col-12 pr-0">
 				
 				<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-					<ul class="navbar-nav text-">
-						<li class="nav-item active">
-							<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><class style="font-size: 30px">≡</class></button>
-							<div class="dropdown-menu">
-							  <a class="dropdown-item" href="bts_4_home.html">Home</a>
-							  <a class="dropdown-item" href="bts_4_anime.html">Anime</a>
-							</div>
-						</li>
-					</ul>
-				</nav>
-			</div>
-			
-			<!-- 	Visualizzazione su smartphone 	-->
-		
-			<!-- 	Visualizzazione su PC 	-->
-		
-			<div class="col-lg-12 d-md-none d-lg-block">
-				<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-					<ul class="navbar-nav text-">
+					<ul class="navbar-nav mr-auto">
 						<li class="nav-item active">
 							<a class="nav-link" href="bts_4_home.html">Home</a>
 						</li>
@@ -80,73 +62,244 @@
 							<a class="nav-link" href="bts_4_anime.html">Anime</a>
 						</li>
 					</ul>
+					
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item d-xl-none">
+							<div class="dropdown dropleft float-right">
+								<button type="button" class="btn btn-primary" data-toggle="dropdown"><span class="navbar-toggler-icon"></span></button>
+								<div class="dropdown-menu">
+								  <a class="dropdown-item" href="#nanatsuNoTaizai">Nanatsu no Taizai</a>
+								  <a class="dropdown-item" href="#yourLieInApril">Your Lie In April</a>
+								  <a class="dropdown-item" href="#bokuNoHero">Boku No Hero</a>
+								  <a class="dropdown-item" href="#darlingInTheFranxx">Darling in the Franxx</a>
+								  <a class="dropdown-item" href="#shingekiNoKyojin">Shingeki no Kyojin</a>
+								  <a class="dropdown-item" href="#blueExorcist">Blue Exorcist</a>
+								  <a class="dropdown-item" href="#swordArtOnline">Sword Art Online</a>
+								  <a class="dropdown-item" href="#danMachi">DanMachi</a>
+								</div>
+							</div>
+						</li>
+					</ul>
 				</nav>
-			</div>
-			
-			<div class="col-lg-2">
-				<nav class="navbar bg-secondary">
-				  <ul class="navbar-nav">
-					<li class="nav-item">
-					  <a class="nav-link" href="#">Anime 1</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#">Anime 2</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#">Anime 3</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#">Anime 4</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#">Anime 5</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#">Anime 6</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#">Anime 7</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#">Anime 8</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#">Anime 9</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#">Anime 10</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#">Anime 11</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#">Anime 12</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#">Anime 13</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#">Anime 14</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#">Anime 15</a>
-					</li>
-					<li class="nav-item">
-					  <br><br><br><br><br><br><br><br><br><br><br>
-					</li>
-				  </ul>
+				
+				<nav class="navbar navbar-expand-sm bg-secondary navbar-dark d-none d-xl-block">
+					<ul class="navbar-nav">
+						<li class="nav-item"><a class="nav-link" href="#nanatsuNoTaizai">Nanatsu no Taizai</a></li>
+						<li class="nav-item"><a class="nav-link" href="#yourLieInApril">Your Lie In April</a></li>
+						<li class="nav-item"><a class="nav-link" href="#bokuNoHero">Boku No Hero</a></li>
+						<li class="nav-item"><a class="nav-link" href="#darlingInTheFranxx">Darling in the Franxx</a></li>
+						<li class="nav-item"><a class="nav-link" href="#shingekiNoKyojin">Shingeki no Kyojin</a></li>
+						<li class="nav-item"><a class="nav-link" href="#blueExorcist">Blue Exorcist</a></li>
+						<li class="nav-item"><a class="nav-link" href="#swordArtOnline">Sword Art Online</a></li>
+						<li class="nav-item"><a class="nav-link" href="#danMachi">DanMachi</a></li>
+					</ul>
 				</nav>
+				
 			</div>
-			
-			<div class="col-lg-10">
-				<div style="height: 600px" class="embed-responsive embed-responsive-16by9">
-				  <iframe class="embed-responsive-item" src="bts_4_home_iframe.html"></iframe>
-				</div>
-			</div>
-			
-			<!-- 	Visualizzazione su PC 	-->
 			
 		</div>
+		
+		<div class="container-fluid">
+			
+			<div class="col-11 mx-auto" style="background-image: url('imgs/bg2.jpg'); background-repeat: repeat;">
+				
+				<br>
+				<center><img src="imgs/anime.png" class="img-fluid" style="max-height:200px;"></center>
+				<br>
+				
+				<div class="container-fluid d-none d-xl-block">
+					
+					<div class="row">
+						
+						<div class="col-1"></div>
+						
+						<div class="col-5">
+							<p class="h4 text-justify">
+								Anime (アニメ), dall'abbreviazione di animēshon (traslitterazione giapponese della parola inglese animation, "animazione"), è un neologismo con cui in Giappone,
+								a partire dalla fine degli anni settanta del XX secolo, si indicano l'animazione e i film d'animazione (giapponesi e non), fino ad allora chiamati dōga eiga
+								(動画 映画 - film animato) o manga eiga (漫画 映画 - film di fumetti), mentre in Occidente viene comunemente utilizzato per indicare le opere di animazione di produzione
+								giapponese, comprese quelle precedenti l'esordio del lemma stesso.
+							</p>
+						</div>
+						
+						<div class="col-1"></div>
+						
+						<div class="col-4">
+							<center><img src="imgs/img1.jpg" class="img-fluid mx-auto" style="height: fit;"></center>
+						</div>
+						
+						<div class="col-1"></div>
+						
+					</div>
+					
+					<div class="row" id="spacer"><br></div>
+					
+					<div class="row">
+						
+						<div class="col-1"></div>
+						
+						<div class="col-4">
+							<center><img src="imgs/img2.png" class="img-fluid mx-auto" style="height: fit;"></center>
+						</div>
+						
+						<div class="col-1"></div>
+						
+						<div class="col-5">
+							<p class="h4 text-justify">
+								Secondo un'accezione generica in Occidente si tende a definire anime come sinonimo di "cartone animato giapponese", sennonché una simile definizione non
+								fornisce l'esatta idea della complessità e della varietà che caratterizzano questo medium. Nonostante un ormai sorpassato luogo comune occidentale
+								che riduce l'animazione giapponese a un prodotto rivolto ad un pubblico infantile o, al contrario, a carattere pornografico, confondendo in entrambi i casi
+								una parte per il tutto, in realtà l'anime è allo stesso tempo un prodotto di intrattenimento commerciale, un fenomeno culturale popolare di massa e una
+								forma d'arte tecnologica. Esso è potenzialmente indirizzato a diverse tipologie di pubblico, dai bambini, agli adolescenti, agli adulti, fino ad arrivare
+								ad una specializzazione del target sostanzialmente mutuata da quella esistente per i manga (fumetti giapponesi), con anime concepiti per categorie
+								socio-demografiche specifiche quali impiegati, casalinghe, studenti e altro. Essi possono, pertanto, trattare soggetti, argomenti e generi molto diversi tra
+								loro come amore, avventura, fantascienza, storie per bambini, letteratura, sport, fantasy, erotismo e molto altro ancora.
+							</p>
+						</div>
+						
+						<div class="col-1"></div>
+						
+					</div>
+					
+					<div class="row" id="spacer"><br></div>
+					
+					<div class="row">
+						
+						<div class="col-1"></div>
+						
+						<div class="col-10">
+							<p class="h4 text-justify">
+							Come accade per qualsiasi medium ovunque nel mondo, anche gli anime veicolano inevitabilmente la cultura dei loro autori e, nello specifico,
+							quella giapponese, pur se nel quadro di una ormai tendenziale contaminazione delle fonti. Vari e numerosi sono infatti negli anime i riferimenti
+							e i richiami ad elementi fondamentali del costume e della società nipponici, elementi che spesso offrono contributi determinanti del contenuto e
+							dell'estetica, e che possono individuarsi, in via di estrema approssimazione, nelle tradizioni shintoista e buddhista, nel bushidō (武士道), in
+							particolari relazioni o regole sociali, quali, ad esempio, il rapporto senpai-kōhai (先輩-後輩?) e il giri (義理), ma anche nel controverso
+							dibattito sociale sul rapporto tra uomo, natura e tecnologia. Non mancano, tuttavia, frequenti riferimenti espliciti e impliciti anche alla
+							cultura occidentale, come nel caso dei numerosi anime concepiti nell'ambito del Sekai Meisaku Gekijō (World Masterpiece Theater), una "etichetta"
+							data a serie indipendenti l'una dall'altra, ma con in comune l'essere tratte in particolar modo da romanzi americani ed europei per ragazzi.
+							</p>
+						</div>
+						
+						<div class="col-1"></div>
+						
+					</div>
+					
+					<div class="row" id="spacer"><br></div>
+					
+					<div class="row">
+					
+						<div class="col-1"></div>
+						
+						<div class="col-10">
+							<center><img src="imgs/img3.png" class="img-fluid mx-auto" style="width: fit;"></center>
+						</div>
+						
+						<div class="col-1"></div>
+						
+					</div>
+					
+				</div>
+				
+				<div class="container-fluid d-xl-none">
+					
+					<div class="row">
+						
+						<div class="col-1"></div>
+						
+						<div class="col-10">
+							<p class="h4 text-justify">
+								Anime (アニメ), dall'abbreviazione di animēshon (traslitterazione giapponese della parola inglese animation, "animazione"), è un neologismo con cui in Giappone,
+								a partire dalla fine degli anni settanta del XX secolo, si indicano l'animazione e i film d'animazione (giapponesi e non), fino ad allora chiamati dōga eiga
+								(動画 映画 - film animato) o manga eiga (漫画 映画 - film di fumetti), mentre in Occidente viene comunemente utilizzato per indicare le opere di animazione di produzione
+								giapponese, comprese quelle precedenti l'esordio del lemma stesso.
+							</p>
+						</div>
+						
+						<div class="col-1"></div>
+						
+					</div>
+					
+					<div class="row" id="spacer"><br></div>
+					
+					<div class="row">
+						
+						<div class="col-1"></div>
+						
+						<div class="col-10">
+							<center><img src="imgs/img1.jpg" class="img-fluid mx-auto" style="max-height: 10%;"></center>
+						</div>
+						
+						<div class="col-1"></div>
+						
+					</div>
+					
+					<div class="row" id="spacer"><br></div>
+					
+					<div class="row">
+						
+						<div class="col-1"></div>
+						
+						<div class="col-10">
+							<p class="h4 text-justify">
+								Secondo un'accezione generica in Occidente si tende a definire anime come sinonimo di "cartone animato giapponese", sennonché una simile definizione non
+								fornisce l'esatta idea della complessità e della varietà che caratterizzano questo medium. Nonostante un ormai sorpassato luogo comune occidentale
+								che riduce l'animazione giapponese a un prodotto rivolto ad un pubblico infantile o, al contrario, a carattere pornografico, confondendo in entrambi i casi
+								una parte per il tutto, in realtà l'anime è allo stesso tempo un prodotto di intrattenimento commerciale, un fenomeno culturale popolare di massa e una
+								forma d'arte tecnologica. Esso è potenzialmente indirizzato a diverse tipologie di pubblico, dai bambini, agli adolescenti, agli adulti, fino ad arrivare
+								ad una specializzazione del target sostanzialmente mutuata da quella esistente per i manga (fumetti giapponesi), con anime concepiti per categorie
+								socio-demografiche specifiche quali impiegati, casalinghe, studenti e altro. Essi possono, pertanto, trattare soggetti, argomenti e generi molto diversi tra
+								loro come amore, avventura, fantascienza, storie per bambini, letteratura, sport, fantasy, erotismo e molto altro ancora.
+							</p>
+						</div>
+						
+						<div class="col-1"></div>
+						
+					</div>
+					
+					<div class="row" id="spacer"><br></div>
+					
+					<div class="row">
+						
+						<div class="col-1"></div>
+						
+						<div class="col-10">
+							<center><img src="imgs/img2.png" class="img-fluid mx-auto" style="height: fit;"></center>
+						</div>
+						
+						<div class="col-1"></div>
+						
+						<div class="row">
+						
+							<div class="col-1"></div>
+							
+							<div class="col-10">
+								<p class="h4 text-justify">
+								Come accade per qualsiasi medium ovunque nel mondo, anche gli anime veicolano inevitabilmente la cultura dei loro autori e, nello specifico,
+								quella giapponese, pur se nel quadro di una ormai tendenziale contaminazione delle fonti. Vari e numerosi sono infatti negli anime i riferimenti
+								e i richiami ad elementi fondamentali del costume e della società nipponici, elementi che spesso offrono contributi determinanti del contenuto e
+								dell'estetica, e che possono individuarsi, in via di estrema approssimazione, nelle tradizioni shintoista e buddhista, nel bushidō (武士道), in
+								particolari relazioni o regole sociali, quali, ad esempio, il rapporto senpai-kōhai (先輩-後輩?) e il giri (義理), ma anche nel controverso
+								dibattito sociale sul rapporto tra uomo, natura e tecnologia. Non mancano, tuttavia, frequenti riferimenti espliciti e impliciti anche alla
+								cultura occidentale, come nel caso dei numerosi anime concepiti nell'ambito del Sekai Meisaku Gekijō (World Masterpiece Theater), una "etichetta"
+								data a serie indipendenti l'una dall'altra, ma con in comune l'essere tratte in particolar modo da romanzi americani ed europei per ragazzi.
+								</p>
+							</div>
+							
+							<div class="col-1"></div>
+							
+						</div>
+						
+					</div>
+					
+				</div>
+				
+				<br>
+				
+			</div>
+			
+		</div>
+		
+		<br>
 		
 	</body>
 </html>
