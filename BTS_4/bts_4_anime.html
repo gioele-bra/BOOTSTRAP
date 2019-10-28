@@ -25,6 +25,9 @@
 				$('.headerImage').css({'background-image': 'url("imgs/' + images[Math.floor(Math.random() * images.length)] +'")'});
 			});
 			
+			$(document).ready(function(){
+				$('.toast').toast('show');
+			});
 		</script>
 		
 		<style>
@@ -98,11 +101,23 @@
 				
 			</div>
 			
+			<div class="toast" style="position: absolute; top: 110px; right: 0;" data-autohide="false">
+			  <div class="toast-header">
+				<strong class="mr-auto text-primary">Alert!</strong>
+				<button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+			  </div>
+			  <div class="toast-body">Website correctly loaded</div>
+			</div>
+			
 		</div>
+		
+		
 		
 		<!-- ^^^ NavBar ^^^ -->
 		
 		<div class="container-fluid">
+			
+			<br><br><br><br>
 			
 			<div class="col-11 mx-auto" style="background-image: url('imgs/bg2.jpg'); background-repeat: repeat;">
 				
@@ -343,6 +358,8 @@
 			</div>
 			
 		</div>
+		
+		<br><br><br><br>
 		
 	</body>
 </html>
